@@ -1,4 +1,4 @@
-<?php
+п»ї<?php
 
 function outputPages($divClass,$pages){
 	$outputString = "";
@@ -18,17 +18,17 @@ $toPage = $_GET["toPage"];
 
 ?>
 <div id="header">
-<h1>Печаталка буклетов</h1>
+<h1>РџРµС‡Р°С‚Р°Р»РєР° Р±СѓРєР»РµС‚РѕРІ</h1>
 </div>
 <div id="description">
-<p>При помощи этого сайта можно печатать буклеты. Не нужно ничего устанавливать. Понадобится программа, позволяющая печатать документ с указанием номеров страниц.</p>
-<p>Ограничения - распечатать можно число страниц, которое делится на 4. Иначе последняя страница повторится 1-3 раза, чтобы заполнить место.</p>
+<p>РџСЂРё РїРѕРјРѕС‰Рё СЌС‚РѕРіРѕ СЃР°Р№С‚Р° РјРѕР¶РЅРѕ РїРµС‡Р°С‚Р°С‚СЊ Р±СѓРєР»РµС‚С‹. РќРµ РЅСѓР¶РЅРѕ РЅРёС‡РµРіРѕ СѓСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ. РџРѕРЅР°РґРѕР±РёС‚СЃСЏ РїСЂРѕРіСЂР°РјРјР°, РїРѕР·РІРѕР»СЏСЋС‰Р°СЏ РїРµС‡Р°С‚Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚ СЃ СѓРєР°Р·Р°РЅРёРµРј РЅРѕРјРµСЂРѕРІ СЃС‚СЂР°РЅРёС†.</p>
+<p>РћРіСЂР°РЅРёС‡РµРЅРёСЏ - СЂР°СЃРїРµС‡Р°С‚Р°С‚СЊ РјРѕР¶РЅРѕ С‡РёСЃР»Рѕ СЃС‚СЂР°РЅРёС†, РєРѕС‚РѕСЂРѕРµ РґРµР»РёС‚СЃСЏ РЅР° 4. РРЅР°С‡Рµ РїРѕСЃР»РµРґРЅСЏСЏ СЃС‚СЂР°РЅРёС†Р° РїРѕРІС‚РѕСЂРёС‚СЃСЏ 1-3 СЂР°Р·Р°, С‡С‚РѕР±С‹ Р·Р°РїРѕР»РЅРёС‚СЊ РјРµСЃС‚Рѕ.</p>
 </div>
 <div id="intervals">
 <form action="index.php" method="get">
-Со страницы <input type="text" name="fromPage" value="<?php if($fromPage){echo($fromPage);}else{echo 1;}?>"><br />
-По страницу <input type="text" name="toPage" value="<?php if($toPage){echo($toPage);}else{echo 20;}?>"><br />
-<input type="submit" value="Считать">
+РЎРѕ СЃС‚СЂР°РЅРёС†С‹ <input type="text" name="fromPage" value="<?php if($fromPage){echo($fromPage);}else{echo 1;}?>"><br />
+РџРѕ СЃС‚СЂР°РЅРёС†Сѓ <input type="text" name="toPage" value="<?php if($toPage){echo($toPage);}else{echo 20;}?>"><br />
+<input type="submit" value="РЎС‡РёС‚Р°С‚СЊ">
 </form>
 </div>
 <?php
@@ -44,7 +44,7 @@ if($fromPage and $toPage){
 	$printAmount = $realAmount;
 	if ($printAmount%4 != 0){
 		$addedPageAmount = 4-$printAmount%4;
-		echo "<div class='warning'>Внимание! Последняя страница будет напечатана $addedPageAmount раз(а)! Если это нежелательно, добавьте в конец печатаемого документа ещё $addedPageAmount пустых страницы и задайте интервал от $fromPage+1 до $toPage+$addedPageAmount.</div><br />";
+		echo "<div class='warning'>Р’РЅРёРјР°РЅРёРµ! РџРѕСЃР»РµРґРЅСЏСЏ СЃС‚СЂР°РЅРёС†Р° Р±СѓРґРµС‚ РЅР°РїРµС‡Р°С‚Р°РЅР° $addedPageAmount СЂР°Р·(Р°)! Р•СЃР»Рё СЌС‚Рѕ РЅРµР¶РµР»Р°С‚РµР»СЊРЅРѕ, РґРѕР±Р°РІСЊС‚Рµ РІ РєРѕРЅРµС† РїРµС‡Р°С‚Р°РµРјРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РµС‰С‘ $addedPageAmount РїСѓСЃС‚С‹С… СЃС‚СЂР°РЅРёС†С‹ Рё Р·Р°РґР°Р№С‚Рµ РёРЅС‚РµСЂРІР°Р» РѕС‚ $fromPage+1 РґРѕ $toPage+$addedPageAmount.</div><br />";
 		$printAmount = $printAmount+$addedPageAmount;
 	}
 
@@ -75,7 +75,7 @@ if($fromPage and $toPage){
 	outputPages("outputPagesB",$pagesB);
 	
 	?>
-	<h2>Инструкция</h2>
+	<h2>РРЅСЃС‚СЂСѓРєС†РёСЏ</h2>
 	<?php
 }
 
