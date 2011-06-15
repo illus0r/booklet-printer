@@ -7,10 +7,6 @@ display:none;
 .splash-info-link:hover .splash-info-container{
 display:inline-block;
 position:absolute;
-height:300px;
-width:300px;
-background: black;
-color:white;
 }
 </style>
 </head>
